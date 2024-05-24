@@ -1,5 +1,6 @@
 using Microsoft.Extensions.Configuration;
 using NetStone.Common.Exceptions;
+using NetStone.Common.Helper;
 
 namespace NetStone.Common.Extensions;
 
@@ -15,5 +16,11 @@ public static class ConfigurationExtension
         }
 
         return value;
+    }
+
+    public static T GetGuardedConfiguration<T>(this IConfiguration configuration, string key)
+    {
+        var valueStr = configuration[key];
+        return EnvironmentVariableHelper.ConvertType<T>(key, valueStr);
     }
 }
