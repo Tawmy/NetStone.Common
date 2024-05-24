@@ -1,8 +1,10 @@
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace NetStone.Common.Enums;
 
 [Flags]
+[JsonConverter(typeof(JsonStringEnumConverter))]
 public enum FreeCompanyFocus
 {
     None = 0,
