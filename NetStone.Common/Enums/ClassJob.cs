@@ -66,7 +66,14 @@ public enum ClassJob
     #region Endwalker
 
     Reaper,
-    Sage
+    Sage,
+
+    #endregion
+
+    #region Dawntrail
+
+    Viper,
+    Pictomancer
 
     #endregion
 }
