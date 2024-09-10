@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace NetStone.Common.Enums;
 
 public enum Race
@@ -5,9 +7,9 @@ public enum Race
     Hyur,
     Elezen,
     Lalafell,
-    Miqote,
+    [Display(Name = "Miqo'te")] Miqote,
     Roegadyn,
-    AuRa,
+    [Display(Name = "Au Ra")] AuRa,
     Hrothgar,
     Viera
 }

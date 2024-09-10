@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace NetStone.Common.Enums;
 
 public enum Tribe
@@ -25,19 +27,19 @@ public enum Tribe
 
     #region Miqo'te
 
-    SeekeroftheSun,
-    KeeperoftheMoon,
+    [Display(Name = "Seeker of the Sun")] SeekerOfTheSun,
+    [Display(Name = "Keeper of the Moon")] KeeperOfTheMoon,
 
     #endregion
 
     #region Roegadyn
 
-    SeaWolf,
+    [Display(Name = "Sea Wolf")] SeaWolf,
     Hellsguard,
 
     #endregion
 
-    #region u Ra
+    #region Au Ra
 
     Raen,
     Xaela,
@@ -47,7 +49,7 @@ public enum Tribe
     #region Hrothgar
 
     Helions,
-    TheLost,
+    [Display(Name = "The Lost")] TheLost,
 
     #endregion
 

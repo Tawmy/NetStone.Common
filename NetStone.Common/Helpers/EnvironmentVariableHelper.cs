@@ -1,6 +1,6 @@
 using NetStone.Common.Exceptions;
 
-namespace NetStone.Common.Helper;
+namespace NetStone.Common.Helpers;
 
 public static class EnvironmentVariableHelper
 {

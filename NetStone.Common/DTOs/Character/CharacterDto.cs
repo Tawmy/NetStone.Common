@@ -27,7 +27,10 @@ public record CharacterDto
 
     // TODO expand PVP Team to be full entity?
     public string? PvpTeam { get; init; }
-    public required string RaceClanGender { get; init; }
+
+    public required Race Race { get; init; }
+    public required Tribe Tribe { get; init; }
+    public required Gender Gender { get; init; }
 
     public string? TownName { get; init; }
     public string? TownIcon { get; init; }

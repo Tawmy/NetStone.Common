@@ -1,6 +1,6 @@
 using Microsoft.Extensions.Configuration;
 using NetStone.Common.Exceptions;
-using NetStone.Common.Helper;
+using NetStone.Common.Helpers;
 
 namespace NetStone.Common.Extensions;
 
