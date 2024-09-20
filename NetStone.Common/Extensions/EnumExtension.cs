@@ -45,4 +45,18 @@ public static class EnumExtension
         value = displayAttr?.Description;
         return value is not null;
     }
+
+    public static string GetShortName(this Enum enumValue)
+    {
+        var displayAttr = enumValue.GetAttribute<DisplayAttribute>();
+        return displayAttr?.ShortName ??
+               throw new ArgumentNullException(nameof(enumValue), "Enum does not have a short name.");
+    }
+
+    public static bool TryGetShortName(this Enum enumValue, out string? value)
+    {
+        var displayAttr = enumValue.GetAttribute<DisplayAttribute>();
+        value = displayAttr?.ShortName;
+        return value is not null;
+    }
 }

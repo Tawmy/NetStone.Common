@@ -56,4 +56,75 @@ public static class ClassJobExtension
             _ => null
         };
     }
+
+    /// <summary>
+    ///     Returns primary and secondary attributes for jobs.
+    /// </summary>
+    /// <remarks>
+    ///     Crafters and gatherers do not have any primary attributes, so only secondary ones are returned for them.
+    /// </remarks>
+    /// <param name="job">The job to get attributes for.</param>
+    /// <returns>A collection of attributes, primary then secondary.</returns>
+    /// <exception cref="ArgumentOutOfRangeException">Job not implemented.</exception>
+    public static ICollection<CharacterAttribute> GetDisplayAttributes(this ClassJob job)
+    {
+        return job switch
+        {
+            ClassJob.Paladin or ClassJob.Warrior or ClassJob.DarkKnight or ClassJob.Gunbreaker =>
+            [
+                CharacterAttribute.Strength,
+                CharacterAttribute.Vitality,
+                CharacterAttribute.CriticalHitRate,
+                CharacterAttribute.Determination,
+                CharacterAttribute.Tenacity
+            ],
+            ClassJob.WhiteMage or ClassJob.Scholar or ClassJob.Astrologian or ClassJob.Sage =>
+            [
+                CharacterAttribute.Mind,
+                CharacterAttribute.Vitality,
+                CharacterAttribute.CriticalHitRate,
+                CharacterAttribute.DirectHitRate,
+                CharacterAttribute.Determination
+            ],
+            ClassJob.Monk or ClassJob.Dragoon or ClassJob.Ninja or ClassJob.Samurai or ClassJob.Reaper
+                or ClassJob.Viper =>
+                [
+                    CharacterAttribute.Strength,
+                    CharacterAttribute.Vitality,
+                    CharacterAttribute.CriticalHitRate,
+                    CharacterAttribute.Determination,
+                    CharacterAttribute.DirectHitRate
+                ],
+            ClassJob.Bard or ClassJob.Machinist or ClassJob.Dancer => new[]
+            {
+                CharacterAttribute.Dexterity,
+                CharacterAttribute.Vitality,
+                CharacterAttribute.CriticalHitRate,
+                CharacterAttribute.Determination,
+                CharacterAttribute.DirectHitRate
+            },
+            ClassJob.BlackMage or ClassJob.Summoner or ClassJob.RedMage or ClassJob.Pictomancer or ClassJob.BlueMage =>
+            [
+                CharacterAttribute.Intelligence,
+                CharacterAttribute.Vitality,
+                CharacterAttribute.CriticalHitRate,
+                CharacterAttribute.Determination,
+                CharacterAttribute.DirectHitRate
+            ],
+            ClassJob.Carpenter or ClassJob.Blacksmith or ClassJob.Armorer or ClassJob.Goldsmith
+                or ClassJob.Leatherworker or ClassJob.Weaver or ClassJob.Alchemist or ClassJob.Culinarian =>
+                [
+                    CharacterAttribute.Craftmanship,
+                    CharacterAttribute.Control,
+                    CharacterAttribute.Cp
+                ],
+            ClassJob.Miner or ClassJob.Botanist or ClassJob.Fisher =>
+            [
+                CharacterAttribute.Gathering,
+                CharacterAttribute.Perception,
+                CharacterAttribute.Gp
+            ],
+            _ => throw new ArgumentOutOfRangeException(nameof(job), job, "Job not implemented")
+        };
+    }
 }

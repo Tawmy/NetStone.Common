@@ -22,4 +22,7 @@ public record CharacterAttributesDto
     public required int Hp { get; init; }
     public required int MpGpCp { get; init; }
     public required string MpGpCpParameterName { get; init; }
+
+    // TODO add Craftmanship, Control, Gathering, Perception
+    // why tf they missing
 }

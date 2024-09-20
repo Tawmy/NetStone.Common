@@ -1,4 +1,5 @@
 using NetStone.Common.Enums;
+using NetStone.Common.Extensions;
 
 namespace NetStone.Common.DTOs.Character;
 
@@ -38,6 +39,7 @@ public record CharacterDto
     public required ICollection<CharacterGearDto> Gear { get; init; }
 
     public required CharacterAttributesDto Attributes { get; init; }
+    public IDictionary<CharacterAttribute, int?> AttributesDictionary => Attributes.ToAttributeDictionary();
 
     public bool Cached { get; init; }
     public DateTime LastUpdated { get; init; }
