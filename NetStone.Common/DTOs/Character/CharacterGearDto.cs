@@ -8,6 +8,8 @@ public record CharacterGearDto
 
     public required string ItemName { get; init; }
 
+    public required int ItemLevel { get; init; }
+
     public string? ItemDatabaseLink { get; init; }
     public bool? IsHq { get; init; }
     public string? StrippedItemName { get; init; }
