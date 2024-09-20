@@ -127,4 +127,15 @@ public static class ClassJobExtension
             _ => throw new ArgumentOutOfRangeException(nameof(job), job, "Job not implemented")
         };
     }
+
+    public static bool IsDiscipleOfHand(this ClassJob classJob)
+    {
+        return classJob is ClassJob.Carpenter or ClassJob.Blacksmith or ClassJob.Armorer or ClassJob.Goldsmith
+            or ClassJob.Leatherworker or ClassJob.Weaver or ClassJob.Alchemist or ClassJob.Culinarian;
+    }
+
+    public static bool IsDiscipleOfLand(this ClassJob classJob)
+    {
+        return classJob is ClassJob.Miner or ClassJob.Botanist or ClassJob.Fisher;
+    }
 }
