@@ -35,7 +35,7 @@ public record CharacterDto
     public string? TownName { get; init; }
     public string? TownIcon { get; init; }
 
-    public required IEnumerable<CharacterGearDto> Gear { get; init; }
+    public required ICollection<CharacterGearDto> Gear { get; init; }
 
     public required CharacterAttributesDto Attributes { get; init; }
 
