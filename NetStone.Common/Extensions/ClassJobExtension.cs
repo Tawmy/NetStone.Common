@@ -70,15 +70,16 @@ public static class ClassJobExtension
     {
         return job switch
         {
-            ClassJob.Paladin or ClassJob.Warrior or ClassJob.DarkKnight or ClassJob.Gunbreaker =>
-            [
-                CharacterAttribute.Strength,
-                CharacterAttribute.Vitality,
-                CharacterAttribute.CriticalHitRate,
-                CharacterAttribute.Determination,
-                CharacterAttribute.Tenacity
-            ],
-            ClassJob.WhiteMage or ClassJob.Scholar or ClassJob.Astrologian or ClassJob.Sage =>
+            ClassJob.Gladiator or ClassJob.Paladin or ClassJob.Marauder or ClassJob.Warrior or ClassJob.DarkKnight
+                or ClassJob.Gunbreaker =>
+                [
+                    CharacterAttribute.Strength,
+                    CharacterAttribute.Vitality,
+                    CharacterAttribute.CriticalHitRate,
+                    CharacterAttribute.Determination,
+                    CharacterAttribute.Tenacity
+                ],
+            ClassJob.Conjurer or ClassJob.WhiteMage or ClassJob.Scholar or ClassJob.Astrologian or ClassJob.Sage =>
             [
                 CharacterAttribute.Mind,
                 CharacterAttribute.Vitality,
@@ -86,8 +87,8 @@ public static class ClassJobExtension
                 CharacterAttribute.DirectHitRate,
                 CharacterAttribute.Determination
             ],
-            ClassJob.Monk or ClassJob.Dragoon or ClassJob.Ninja or ClassJob.Samurai or ClassJob.Reaper
-                or ClassJob.Viper =>
+            ClassJob.Pugilist or ClassJob.Monk or ClassJob.Lancer or ClassJob.Dragoon or ClassJob.Rogue
+                or ClassJob.Ninja or ClassJob.Samurai or ClassJob.Reaper or ClassJob.Viper =>
                 [
                     CharacterAttribute.Strength,
                     CharacterAttribute.Vitality,
@@ -95,22 +96,23 @@ public static class ClassJobExtension
                     CharacterAttribute.Determination,
                     CharacterAttribute.DirectHitRate
                 ],
-            ClassJob.Bard or ClassJob.Machinist or ClassJob.Dancer => new[]
-            {
+            ClassJob.Archer or ClassJob.Bard or ClassJob.Machinist or ClassJob.Dancer =>
+            [
                 CharacterAttribute.Dexterity,
                 CharacterAttribute.Vitality,
                 CharacterAttribute.CriticalHitRate,
                 CharacterAttribute.Determination,
                 CharacterAttribute.DirectHitRate
-            },
-            ClassJob.BlackMage or ClassJob.Summoner or ClassJob.RedMage or ClassJob.Pictomancer or ClassJob.BlueMage =>
-            [
-                CharacterAttribute.Intelligence,
-                CharacterAttribute.Vitality,
-                CharacterAttribute.CriticalHitRate,
-                CharacterAttribute.Determination,
-                CharacterAttribute.DirectHitRate
             ],
+            ClassJob.Thaumaturge or ClassJob.BlackMage or ClassJob.Arcanist or ClassJob.Summoner or ClassJob.RedMage
+                or ClassJob.Pictomancer or ClassJob.BlueMage =>
+                [
+                    CharacterAttribute.Intelligence,
+                    CharacterAttribute.Vitality,
+                    CharacterAttribute.CriticalHitRate,
+                    CharacterAttribute.Determination,
+                    CharacterAttribute.DirectHitRate
+                ],
             ClassJob.Carpenter or ClassJob.Blacksmith or ClassJob.Armorer or ClassJob.Goldsmith
                 or ClassJob.Leatherworker or ClassJob.Weaver or ClassJob.Alchemist or ClassJob.Culinarian =>
                 [
