@@ -88,7 +88,7 @@ public static class ClassJobExtension
                 CharacterAttribute.Determination
             ],
             ClassJob.Pugilist or ClassJob.Monk or ClassJob.Lancer or ClassJob.Dragoon or ClassJob.Rogue
-                or ClassJob.Ninja or ClassJob.Samurai or ClassJob.Reaper or ClassJob.Viper =>
+                or ClassJob.Samurai or ClassJob.Reaper =>
                 [
                     CharacterAttribute.Strength,
                     CharacterAttribute.Vitality,
@@ -96,7 +96,7 @@ public static class ClassJobExtension
                     CharacterAttribute.Determination,
                     CharacterAttribute.DirectHitRate
                 ],
-            ClassJob.Archer or ClassJob.Bard or ClassJob.Machinist or ClassJob.Dancer =>
+            ClassJob.Archer or ClassJob.Bard or ClassJob.Machinist or ClassJob.Dancer or ClassJob.Ninja or ClassJob.Viper =>
             [
                 CharacterAttribute.Dexterity,
                 CharacterAttribute.Vitality,
