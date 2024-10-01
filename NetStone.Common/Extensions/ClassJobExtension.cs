@@ -96,14 +96,15 @@ public static class ClassJobExtension
                     CharacterAttribute.Determination,
                     CharacterAttribute.DirectHitRate
                 ],
-            ClassJob.Archer or ClassJob.Bard or ClassJob.Machinist or ClassJob.Dancer or ClassJob.Ninja or ClassJob.Viper =>
-            [
-                CharacterAttribute.Dexterity,
-                CharacterAttribute.Vitality,
-                CharacterAttribute.CriticalHitRate,
-                CharacterAttribute.Determination,
-                CharacterAttribute.DirectHitRate
-            ],
+            ClassJob.Archer or ClassJob.Bard or ClassJob.Machinist or ClassJob.Dancer or ClassJob.Ninja
+                or ClassJob.Viper =>
+                [
+                    CharacterAttribute.Dexterity,
+                    CharacterAttribute.Vitality,
+                    CharacterAttribute.CriticalHitRate,
+                    CharacterAttribute.Determination,
+                    CharacterAttribute.DirectHitRate
+                ],
             ClassJob.Thaumaturge or ClassJob.BlackMage or ClassJob.Arcanist or ClassJob.Summoner or ClassJob.RedMage
                 or ClassJob.Pictomancer or ClassJob.BlueMage =>
                 [
