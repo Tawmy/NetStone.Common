@@ -117,7 +117,7 @@ public static class ClassJobExtension
             ClassJob.Carpenter or ClassJob.Blacksmith or ClassJob.Armorer or ClassJob.Goldsmith
                 or ClassJob.Leatherworker or ClassJob.Weaver or ClassJob.Alchemist or ClassJob.Culinarian =>
                 [
-                    CharacterAttribute.Craftmanship,
+                    CharacterAttribute.Craftsmanship,
                     CharacterAttribute.Control,
                     CharacterAttribute.Cp
                 ],

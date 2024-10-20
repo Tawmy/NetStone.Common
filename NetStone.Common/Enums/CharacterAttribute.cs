@@ -65,7 +65,7 @@ public enum CharacterAttribute
     [Display(Name = "Spell Speed", ShortName = "SpS")]
     SpellSpeed = 46,
 
-    [Display(Name = "Craftmanship")] Craftmanship = 70,
+    [Display(Name = "Craftmanship")] Craftsmanship = 70,
 
     [Display(Name = "Control")] Control = 71,
 
