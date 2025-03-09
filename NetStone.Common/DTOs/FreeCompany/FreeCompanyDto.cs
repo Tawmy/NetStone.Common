@@ -2,7 +2,7 @@ using NetStone.Common.Enums;
 
 namespace NetStone.Common.DTOs.FreeCompany;
 
-public record FreeCompanyDto
+public record FreeCompanyDto : ICachingDto
 {
     public required string Name { get; init; }
     public required string Id { get; init; }
@@ -23,10 +23,12 @@ public record FreeCompanyDto
 
     public FreeCompanyEstateDto? Estate { get; init; }
 
-    public required bool Cached { get; init; }
-    public required DateTime LastUpdated { get; init; }
-
     public required IEnumerable<FreeCompanyFocusDto> Focus { get; init; }
 
     public required IEnumerable<FreeCompanyReputationDto> Reputation { get; init; }
+
+    public required bool Cached { get; init; }
+    public required DateTime? LastUpdated { get; init; }
+    public bool FallbackUsed { get; init; }
+    public string? FallbackReason { get; init; }
 }
