@@ -4,9 +4,7 @@ public record CollectionDto<T>(
     ICollection<T> List,
     bool Cached,
     DateTime? LastUpdated,
-    int Total,
-    bool FallbackUsed = false,
-    string? FallbackReason = null)
+    int Total)
     : ICachingDto
 {
     public decimal Collected => List.Count;

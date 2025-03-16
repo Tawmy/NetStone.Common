@@ -2,10 +2,12 @@ using NetStone.Common.Enums;
 
 namespace NetStone.Common.DTOs.Character;
 
-public record CharacterClassJobOuterDto(
+public record CharacterClassJobOuterDtoV3(
     ICollection<CharacterClassJobDto> Unlocked,
     bool Cached,
-    DateTime? LastUpdated) : ICachingDto
+    DateTime? LastUpdated,
+    bool FallbackUsed = false,
+    string? FallbackReason = null) : ICachingDtoV3
 {
     // ReSharper disable once RedundantExplicitPositionalPropertyDeclaration
     // Need a specific order for these properties
@@ -21,4 +23,12 @@ public record CharacterClassJobOuterDto(
     // ReSharper disable once RedundantExplicitPositionalPropertyDeclaration
     // Need a specific order for these properties
     public DateTime? LastUpdated { get; init; } = LastUpdated;
+
+    // ReSharper disable once RedundantExplicitPositionalPropertyDeclaration
+    // Need a specific order for these properties
+    public bool FallbackUsed { get; init; } = FallbackUsed;
+
+    // ReSharper disable once RedundantExplicitPositionalPropertyDeclaration
+    // Need a specific order for these properties
+    public string? FallbackReason { get; init; } = FallbackReason;
 }

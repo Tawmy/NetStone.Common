@@ -2,7 +2,7 @@ using NetStone.Common.Enums;
 
 namespace NetStone.Common.DTOs.Character;
 
-public record CharacterDto : ICachingDto
+public record CharacterDtoV3 : ICachingDtoV3
 {
     public required string Id { get; init; }
     public required string Name { get; init; }
@@ -41,4 +41,6 @@ public record CharacterDto : ICachingDto
 
     public bool Cached { get; init; }
     public DateTime? LastUpdated { get; init; }
+    public bool FallbackUsed { get; init; }
+    public string? FallbackReason { get; init; }
 }
