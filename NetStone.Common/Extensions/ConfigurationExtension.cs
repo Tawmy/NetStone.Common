@@ -65,6 +65,10 @@ public static class ConfigurationExtension
         {
             value = int.Parse(valueStr);
         }
+        else if (typeof(T) == typeof(bool))
+        {
+            value = bool.Parse(valueStr);
+        }
         else if (typeof(T) == typeof(ulong))
         {
             value = ulong.Parse(valueStr);

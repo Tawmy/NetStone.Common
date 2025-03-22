@@ -1,3 +1,8 @@
 namespace NetStone.Common.DTOs.FreeCompany;
 
-public record FreeCompanyCrestDto(string? TopLayer, string? MiddleLayer, string? BottomLayer);
+public record FreeCompanyCrestDto
+{
+    public string? TopLayer { get; init; }
+    public string? MiddleLayer { get; init; }
+    public string? BottomLayer { get; init; }
+}

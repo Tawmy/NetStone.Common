@@ -1,11 +1,11 @@
 namespace NetStone.Common.DTOs.Character;
 
-public record CollectionDto<T>(
+public record CollectionDtoV2<T>(
     ICollection<T> List,
     bool Cached,
     DateTime? LastUpdated,
     int Total)
-    : ICachingDto
+    : ICachingDtoV2
 {
     public decimal Collected => List.Count;
     public decimal CollectedPercentage => Math.Round(decimal.Multiply(decimal.Divide(Collected, Total), 100), 2);

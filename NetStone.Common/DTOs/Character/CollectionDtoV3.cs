@@ -6,4 +6,8 @@ public record CollectionDtoV3<T>(
     DateTime? LastUpdated,
     int Total,
     bool FallbackUsed = false,
-    string? FallbackReason = null) : ICachingDtoV3;
+    string? FallbackReason = null) : ICachingDtoV3
+{
+    public decimal Collected => List.Count;
+    public decimal CollectedPercentage => Math.Round(decimal.Multiply(decimal.Divide(Collected, Total), 100), 2);
+}

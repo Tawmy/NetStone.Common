@@ -8,7 +8,7 @@ public record FreeCompanyMemberDto
 
     public required string FreeCompanyLodestoneId { get; init; }
 
-    public CharacterDto? CachedCharacter { get; init; }
+    public CharacterDtoV2? CachedCharacter { get; init; }
 
     public required string Name { get; init; }
     public string? Rank { get; init; }

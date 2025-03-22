@@ -2,7 +2,7 @@ using NetStone.Common.Enums;
 
 namespace NetStone.Common.DTOs.Character;
 
-public record CharacterDto : ICachingDto
+public record CharacterDtoV2 : ICachingDtoV2
 {
     public required string Id { get; init; }
     public required string Name { get; init; }

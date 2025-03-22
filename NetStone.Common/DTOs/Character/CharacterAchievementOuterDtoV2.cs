@@ -1,6 +1,6 @@
 namespace NetStone.Common.DTOs.Character;
 
-public record CharacterAchievementOuterDto(
+public record CharacterAchievementOuterDtoV2(
     IEnumerable<CharacterAchievementDto> Achievements,
     bool Cached,
-    DateTime? LastUpdated) : ICachingDto;
+    DateTime? LastUpdated) : ICachingDtoV2;
