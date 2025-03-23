@@ -14,4 +14,4 @@ public record FreeCompanySearchQuery(
     FreeCompanyFocus Focus = FreeCompanyFocus.NotSpecified,
     Seeking Seeking = Seeking.NotSpecified,
     GrandCompany GrandCompany = GrandCompany.NoAffiliation,
-    SortKind SortKind = SortKind.NameAtoZ);
+    SortKindFreeCompany SortKind = SortKindFreeCompany.NameAtoZ);
