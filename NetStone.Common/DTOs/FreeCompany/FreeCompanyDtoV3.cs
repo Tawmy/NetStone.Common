@@ -27,7 +27,7 @@ public record FreeCompanyDtoV3 : ICachingDtoV3
 
     public required IEnumerable<FreeCompanyReputationDto> Reputation { get; init; }
 
-    public required bool Cached { get; init; }
+    public bool Cached { get; init; }
     public required DateTime? LastUpdated { get; init; }
     public bool FallbackUsed { get; init; }
     public string? FallbackReason { get; init; }

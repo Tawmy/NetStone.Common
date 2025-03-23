@@ -1,7 +1,7 @@
 namespace NetStone.Common.DTOs.FreeCompany;
 
 public record FreeCompanyMembersOuterDtoV3(
-    IEnumerable<FreeCompanyMemberDto> Members,
+    IEnumerable<FreeCompanyMemberDtoV3> Members,
     bool Cached,
     DateTime? LastUpdated,
     bool FallbackUsed = false,

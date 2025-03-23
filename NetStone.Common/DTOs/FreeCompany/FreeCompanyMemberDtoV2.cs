@@ -2,7 +2,7 @@ using NetStone.Common.DTOs.Character;
 
 namespace NetStone.Common.DTOs.FreeCompany;
 
-public record FreeCompanyMemberDto
+public record FreeCompanyMemberDtoV2
 {
     public required string LodestoneId { get; init; }
 
