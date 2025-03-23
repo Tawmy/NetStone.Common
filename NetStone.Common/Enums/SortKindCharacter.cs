@@ -1,6 +1,6 @@
 namespace NetStone.Common.Enums;
 
-public enum SortKind
+public enum SortKindCharacter
 {
     NameAtoZ,
     NameZtoA,

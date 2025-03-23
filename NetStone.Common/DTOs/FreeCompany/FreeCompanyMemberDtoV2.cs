@@ -2,13 +2,13 @@ using NetStone.Common.DTOs.Character;
 
 namespace NetStone.Common.DTOs.FreeCompany;
 
-public record FreeCompanyMemberDto
+public record FreeCompanyMemberDtoV2
 {
     public required string LodestoneId { get; init; }
 
     public required string FreeCompanyLodestoneId { get; init; }
 
-    public CharacterDto? CachedCharacter { get; init; }
+    public CharacterDtoV2? CachedCharacter { get; init; }
 
     public required string Name { get; init; }
     public string? Rank { get; init; }

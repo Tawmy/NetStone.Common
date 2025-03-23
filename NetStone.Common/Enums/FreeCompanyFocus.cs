@@ -7,7 +7,7 @@ namespace NetStone.Common.Enums;
 [JsonConverter(typeof(JsonStringEnumConverter))]
 public enum FreeCompanyFocus
 {
-    None = 0,
+    NotSpecified = 0,
     [Display(Name = "Role Playing")] RolePlay = 1,
     Leveling = 1 << 1,
     Casual = 1 << 2,

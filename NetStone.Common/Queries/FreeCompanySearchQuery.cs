@@ -11,7 +11,7 @@ public record FreeCompanySearchQuery(
     ActiveMembers ActiveMembers = ActiveMembers.All,
     Recruitment Recruitment = Recruitment.All,
     Housing Housing = Housing.All,
-    FreeCompanyFocus Focus = FreeCompanyFocus.None,
+    FreeCompanyFocus Focus = FreeCompanyFocus.NotSpecified,
     Seeking Seeking = Seeking.NotSpecified,
     GrandCompany GrandCompany = GrandCompany.NoAffiliation,
-    SortKind SortKind = SortKind.NameAtoZ);
+    SortKindFreeCompany SortKind = SortKindFreeCompany.NameAtoZ);

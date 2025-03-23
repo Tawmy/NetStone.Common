@@ -12,4 +12,4 @@ public record CharacterSearchQuery(
     Tribe? Tribe = null,
     GrandCompany? GrandCompany = null,
     Language? Language = null,
-    SortKind? SortKind = null);
+    SortKindCharacter? SortKind = null);
