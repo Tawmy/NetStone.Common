@@ -1,9 +1,10 @@
 using System.ComponentModel.DataAnnotations;
 using System.Reflection;
+using System.Text.RegularExpressions;
 
 namespace NetStone.Common.Extensions;
 
-public static class EnumExtension
+public static partial class EnumExtension
 {
     /// <summary>
     ///     A generic extension method that aids in reflecting
@@ -59,4 +60,22 @@ public static class EnumExtension
         value = displayAttr?.ShortName;
         return value is not null;
     }
+
+    public static string GetSpaceSeparatedDisplayString(this Enum enumValue)
+    {
+        var val = enumValue.TryGetDisplayName(out var displayName)
+            ? displayName
+            : enumValue.ToString();
+
+        if (val is null)
+        {
+            throw new ArgumentNullException(nameof(enumValue));
+        }
+
+        return PascalCaseToSpaces().Replace(val, "$1 $2"
+        );
+    }
+
+    [GeneratedRegex("([^^])([A-Z])")]
+    private static partial Regex PascalCaseToSpaces();
 }
