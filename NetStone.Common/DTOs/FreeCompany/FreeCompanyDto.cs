@@ -2,7 +2,7 @@ using NetStone.Common.Enums;
 
 namespace NetStone.Common.DTOs.FreeCompany;
 
-public record FreeCompanyDtoV3 : ICachingDtoV3
+public record FreeCompanyDto : ICachingDto
 {
     public required string Name { get; init; }
     public required string Id { get; init; }

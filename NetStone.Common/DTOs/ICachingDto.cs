@@ -1,6 +1,6 @@
 namespace NetStone.Common.DTOs;
 
-public interface ICachingDtoV3
+public interface ICachingDto
 {
     bool Cached { get; init; }
     DateTime? LastUpdated { get; init; }
