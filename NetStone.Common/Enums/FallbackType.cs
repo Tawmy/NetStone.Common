@@ -1,7 +1,7 @@
 namespace NetStone.Common.Enums;
 
 [Flags]
-public enum FallbackType
+public enum FallbackTypeV4
 {
     /// <summary>
     ///     Never use fallback.
@@ -27,4 +27,22 @@ public enum FallbackType
     ///     Use fallback for any <see cref="Exception" />.
     /// </summary>
     Any = 1 << 3
+}
+
+public enum FallbackTypeV3
+{
+    /// <summary>
+    ///     Never use fallback.
+    /// </summary>
+    None,
+
+    /// <summary>
+    ///     Use fallback for <see cref="HttpRequestException" />.
+    /// </summary>
+    Http,
+
+    /// <summary>
+    ///     Use fallback for any <see cref="Exception" />.
+    /// </summary>
+    Any
 }
