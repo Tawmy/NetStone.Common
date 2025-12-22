@@ -1,4 +1,4 @@
-using NetStone.Common.Extensions;
+using AspNetCoreExtensions;
 
 namespace NetStone.Common.Helpers;
 
