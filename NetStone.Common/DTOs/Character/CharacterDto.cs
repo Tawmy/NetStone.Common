@@ -9,7 +9,9 @@ public record CharacterDto : ICachingDto
     public required string Server { get; init; }
     public string? Title { get; init; }
     public required string Avatar { get; init; }
+    public string? AvatarS3 { get; init; }
     public required string Portrait { get; init; }
+    public string? PortraitS3 { get; init; }
     public required string Bio { get; init; }
     public required string Nameday { get; init; }
 
