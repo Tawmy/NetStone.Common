@@ -9,6 +9,7 @@ public record CharacterGearDto
     public required string ItemName { get; init; }
 
     public required int ItemLevel { get; init; }
+    public required GearRarity Rarity { get; init; }
 
     public string? ItemDatabaseLink { get; init; }
     public string? ItemIconLink { get; init; }
