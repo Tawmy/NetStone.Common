@@ -12,6 +12,7 @@ public enum GearSlot
     Hands,
     Legs,
     Feet,
+    Facewear,
     Earrings,
     Necklace,
     Bracelets,
