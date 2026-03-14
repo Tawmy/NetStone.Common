@@ -21,4 +21,7 @@ public record CharacterGearDto
     public string? CreatorName { get; init; }
 
     public IEnumerable<string> Materia { get; init; } = [];
+
+    public CharacterGearDyeDto? Dye1 { get; init; }
+    public CharacterGearDyeDto? Dye2 { get; init; }
 }
