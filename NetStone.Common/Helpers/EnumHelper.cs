@@ -15,6 +15,6 @@ public static class EnumHelper
             }
         }
 
-        throw new ArgumentOutOfRangeException(nameof(value), value, "Enum value not found");
+        throw new ArgumentOutOfRangeException(nameof(value), value, $"Enum value for type {typeof(T)} not found");
     }
 }
