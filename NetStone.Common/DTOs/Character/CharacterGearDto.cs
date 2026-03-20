@@ -9,14 +9,20 @@ public record CharacterGearDto
     public required string ItemName { get; init; }
 
     public required int ItemLevel { get; init; }
+    public required GearRarity Rarity { get; init; }
 
     public string? ItemDatabaseLink { get; init; }
+    public string? ItemIconLink { get; init; }
     public bool? IsHq { get; init; }
     public string? StrippedItemName { get; init; }
     public string? GlamourDatabaseLink { get; init; }
+    public string? GlamourIconLink { get; init; }
     public string? GlamourName { get; init; }
 
     public string? CreatorName { get; init; }
 
     public IEnumerable<string> Materia { get; init; } = [];
+
+    public CharacterGearDyeDto? Dye1 { get; init; }
+    public CharacterGearDyeDto? Dye2 { get; init; }
 }
