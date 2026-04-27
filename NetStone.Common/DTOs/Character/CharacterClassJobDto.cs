@@ -7,7 +7,7 @@ public record CharacterClassJobDto
     public required ClassJob ClassJob { get; init; }
 
     /// <summary>
-    ///     Applicable to jobs with class. True for both MRD and WAR if WAR unlocked, for example.
+    /// Applicable to jobs with class. True for both MRD and WAR if WAR unlocked, for example.
     /// </summary>
     public required bool IsJobUnlocked { get; init; }
 

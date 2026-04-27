@@ -58,10 +58,10 @@ public static class ClassJobExtension
     }
 
     /// <summary>
-    ///     Returns primary and secondary attributes for jobs.
+    /// Returns primary and secondary attributes for jobs.
     /// </summary>
     /// <remarks>
-    ///     Crafters and gatherers do not have any primary attributes, so only secondary ones are returned for them.
+    /// Crafters and gatherers do not have any primary attributes, so only secondary ones are returned for them.
     /// </remarks>
     /// <param name="job">The job to get attributes for.</param>
     /// <returns>A collection of attributes, primary then secondary.</returns>
