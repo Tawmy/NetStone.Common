@@ -74,7 +74,8 @@ public enum ClassJob
     #region Dawntrail
 
     [Display(ShortName = "VPR")] Viper,
-    [Display(ShortName = "PCT")] Pictomancer
+    [Display(ShortName = "PCT")] Pictomancer,
+    [Display(ShortName = "BST")] Beastmaster
 
     #endregion
 }

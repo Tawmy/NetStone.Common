@@ -88,7 +88,7 @@ public static class ClassJobExtension
                 CharacterAttribute.Determination
             ],
             ClassJob.Pugilist or ClassJob.Monk or ClassJob.Lancer or ClassJob.Dragoon or ClassJob.Rogue
-                or ClassJob.Samurai or ClassJob.Reaper =>
+                or ClassJob.Samurai or ClassJob.Reaper or ClassJob.Beastmaster =>
                 [
                     CharacterAttribute.Strength,
                     CharacterAttribute.Vitality,
